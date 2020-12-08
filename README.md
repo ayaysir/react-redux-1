@@ -1,3 +1,6 @@
+# 동작영상 (아래 이미지 클릭하면 이동)
+[![REACT REDUX EXAMPLE](https://img.youtube.com/vi/1U7_D5_scaE/0.jpg)](https://www.youtube.com/watch?v=1U7_D5_scaE)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
