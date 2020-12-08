@@ -1,9 +1,10 @@
 import { createStore } from 'redux'
 import initState from './init.json'
 
-
 function reducer(state = initState, action) {
-    console.log(action)
+
+    // 상태 관리시 action으로 넘어오는 값을 state에 반영
+    // if문은 switch문으로 대체 가능
     if (action.type === 'WELCOME') {
         return { ...state, mode: 'WELCOME', selected_content_id: 0 }
     }

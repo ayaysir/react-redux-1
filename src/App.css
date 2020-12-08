@@ -42,6 +42,6 @@ button, input[type="submit"], input[type="reset"] {
   text-decoration: none;
 }
 
-.button-delete {
+.button.delete {
   background: lightcoral;
 }
