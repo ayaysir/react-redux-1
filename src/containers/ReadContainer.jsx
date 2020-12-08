@@ -20,8 +20,6 @@ export default connect(
                 }
             }
         }
-
-        
         
         return {
             ...targetContent

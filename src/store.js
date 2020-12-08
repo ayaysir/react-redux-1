@@ -1,34 +1,68 @@
-import {createStore} from 'redux'
+import { createStore } from 'redux'
+import initState from './init.json'
 
-const initState = {
-    mode: 'WELCOME',
-    welcome_content: {
-        title: 'WEB',
-        desc: 'desc'
-    },
-    selected_content_id: 1,
-    contents: [
-        {id:1, title:'HTML', desc:'html is...'},
-        {id:2, title:'CSS', desc:'css is...'},
-        {id:3, title:'JS', desc:'js is...'},
-    ]
-}
 
 function reducer(state = initState, action) {
     console.log(action)
-    if(action.type === 'WELCOME') {
-        return {...state, mode: 'WELCOME'}
+    if (action.type === 'WELCOME') {
+        return { ...state, mode: 'WELCOME', selected_content_id: 0 }
     }
-    if(action.type === 'READ') {
+    if (action.type === 'READ') {
         return {
-            ...state, 
+            ...state,
             mode: 'READ',
             selected_content_id: action.id
         }
     }
-    if(action.type === 'CREATE') {
-        return {...state, mode: 'CREATE'}
+    if (action.type === 'CREATE') {
+        return { ...state, mode: 'CREATE' }
     }
+    if (action.type === 'CREATE_PROCESS') {
+
+        const newId = state.max_content_id + 1
+        const contents = [...state.contents, {
+            id: newId,
+            title: action.title,
+            desc: action.desc
+        }]
+        return {
+            ...state,
+            contents,
+            max_content_id: newId,
+            mode: 'READ',
+            selected_content_id: newId
+        }
+    }
+    if (action.type === 'UPDATE') {
+        return { ...state, mode: 'UPDATE' }
+    }
+    if (action.type === 'UPDATE_PROCESS') {
+
+        const contents = [...state.contents]
+        for (let content of contents) {
+            if (content.id === action.id) {
+                // 이렇게 해도 배열에 있는 객체의 값이 바뀜
+                content.title = action.title
+                content.desc = action.desc
+            }
+        }
+        return {
+            ...state,
+            contents,
+            mode: 'READ',
+            selected_content_id: action.id
+        }
+    }
+    if (action.type === 'DELETE_PROCESS') {
+        const contents = state.contents.filter(el => el.id !== state.selected_content_id)
+        return {
+            ...state,
+            contents,
+            mode: 'WELCOME',
+            selected_content_id: 0
+        }
+    }
+
     return state
 }
 

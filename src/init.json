@@ -1,0 +1,26 @@
+{
+    "mode": "WELCOME",
+    "welcome_content": {
+        "title": "Welcome.",
+        "desc": "World-Wide Web(WWW)이란 다양하고도 광범위한 문서들로의 편리한 접근 방법을 제공해주는 분산 하이퍼미디어 정보 검색 시스템입니다. "
+    },
+    "selected_content_id": 0,
+    "max_content_id": 3,
+    "contents": [
+        { 
+            "id": 1, 
+            "title": "HTML", 
+            "desc": "HTML은 Hyper Text Markup Language의 약어로 HyperText(웹 페이지에서 다른 페이지로 이동할 수 있도록 하는 것) 기능을 가진 문서를 만드는 언어입니다."
+        },
+        { 
+            "id": 2, 
+            "title": "CSS", 
+            "desc": "CSS는 Cascading Style Sheets의 약어로 documents가 사용자에게 어떻게 보여질까를 기술하는 언어입니다." 
+        },
+        { 
+            "id": 3, 
+            "title": "JavaScript", 
+            "desc": "자바스크립트는 ‘웹페이지에 생동감을 불어넣기 위해’ 만들어진 프로그래밍 언어입니다." 
+        }
+    ]
+}

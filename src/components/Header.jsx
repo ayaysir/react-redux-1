@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 export default class Header extends Component {
     render() {
         return (
-            <header>
+            <header className="title">
                 <h1><a href="#welcome" onClick={() => 
                     this.props.onClick()
-                }>WEB</a></h1>
-                World Wide Web
+                }>WWW</a></h1>
+                World Wide Web의 구성요소를 알아봅니다.
             </header>
         );
     }

@@ -1,0 +1,58 @@
+body {
+  margin: 10px
+}
+
+.control-list li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.button {
+  display: block;
+  width: 115px;
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button-delete {
+  border: none;
+  display: block;
+  width: 135px;
+  background: lightcoral;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  margin: 10px 0;
+  cursor: pointer;
+}
